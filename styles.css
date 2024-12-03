@@ -1,3 +1,4 @@
+/* Reset de estilo e ajuste de box-sizing */
 *,
 *::before,
 *::after {
@@ -102,6 +103,7 @@ button {
   cursor: pointer;
 }
 
+/* Responsividade para dispositivos com telas pequenas */
 @media screen and (max-width: 768px) {
   .container {
     width: 100%;
@@ -134,6 +136,7 @@ button {
   }
 }
 
+/* Responsividade para dispositivos muito pequenos (celulares) */
 @media screen and (max-width: 480px) {
   .container {
     padding: 5px;
