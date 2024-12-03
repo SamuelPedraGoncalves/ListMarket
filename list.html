@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Compras</title>
+  <link rel="stylesheet" href="list.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Gerenciador de Estoque</h1>
+    <form id="itemForm">
+      <input type="text" id="itemName" placeholder="Nome do Item" required>
+      <input type="number" id="itemStock" placeholder="Quantidade em Estoque" required>
+      <input type="number" id="itemToReplenish" placeholder="Quantidade a Repor" required>
+      <button type="submit">Adicionar Item</button>
+    </form>
+
+    <h2>Lista de Estoque</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th>Estoque</th>
+          <th>Repor</th>
+          <th>Custo Unitário (R$)</th>
+          <th>Valor Total (R$)</th>
+          <th>Comprado</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="itemList"></tbody>
+    </table>
+
+    <div id="totalCost">
+      <h3>Total Geral: R$ <span id="totalValue">0.00</span></h3>
+    </div>
+  </div>
+  <script src="list.js"></script>
+</body>
+</html>
