@@ -47,7 +47,8 @@ function renderItems() {
                onchange="togglePurchased(${index})">
       </td>
       <td>
-        <button onclick="deleteItem(${index})">Excluir</button>
+        <!-- Ícone de lixeira (Font Awesome) -->
+        <i class="fas fa-trash-alt delete-icon" onclick="deleteItem(${index})"></i>
       </td>
     `;
 
