@@ -1,21 +1,24 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* Garante que o padding e as bordas não aumentem a largura total */
+}
+
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f4f7;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  overflow-x: hidden; 
+  overflow-x: hidden; /* Impede a rolagem lateral */
 }
 
 .container {
-  max-width: 700px;
+  max-width: 100%; /* Garante que o container ocupe toda a largura disponível */
   margin: 20px auto;
   background: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box;
-  width: 100%; 
 }
 
 h1, h2 {
@@ -28,7 +31,6 @@ form {
   flex-wrap: wrap;
   gap: 10px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 form input, form button {
@@ -36,7 +38,6 @@ form input, form button {
   min-width: 100px;
   padding: 10px;
   font-size: 1rem;
-  box-sizing: border-box;
   border: 1px solid #ccc;
   border-radius: 4px;
 }
@@ -63,19 +64,17 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
   text-align: center;
-  box-sizing: border-box;
 }
 
 th, td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
-  box-sizing: border-box;
 }
 
 th {
-  background-color: #d3d3d3;
-  color: #303030;
+  background-color: #4CAF50;
+  color: #fff;
 }
 
 tr.purchased {
@@ -107,7 +106,6 @@ button {
   .container {
     width: 100%;
     padding: 10px;
-    box-sizing: border-box;
   }
 
   form input, form button {
