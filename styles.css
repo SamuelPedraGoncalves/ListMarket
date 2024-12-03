@@ -1,196 +1,76 @@
-/* Estilos Globais */
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f7f7f7;
-    margin: 0;
-    padding: 0;
-    color: #333;
-  }
-  
-  .container {
-    max-width: 700px;
-    margin: 20px auto;
-    background: #ffffff;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1, h2 {
-    text-align: center;
-    font-size: 1.8rem;
-    color: #4CAF50;
-  }
-  
-  h1 {
-    margin-bottom: 20px;
-  }
-  
-  form {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: space-between;
-    margin-bottom: 20px;
-  }
-  
-  form input, form button {
-    padding: 12px;
-    font-size: 1rem;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    box-sizing: border-box;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
-  }
-  
-  form input:focus, form button:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 0 8px rgba(76, 175, 80, 0.5);
-    outline: none;
-  }
-  
-  form button {
-    background-color: #4CAF50;
-    color: white;
-    cursor: pointer;
-    flex: 1 1 100%;
-    min-width: 120px;
-    margin-top: 10px;
-  }
-  
-  form button:hover {
-    background-color: #45a049;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-    overflow-x: auto;
-  }
-  
-  th, td {
-    padding: 12px;
-    text-align: center;
-    border: 1px solid #ddd;
-  }
-  
-  th {
-    background-color: #f4f4f4;
-    font-weight: bold;
-  }
-  
-  input[type="number"] {
-    width: 100px;
-    padding: 8px;
-    border: 1px solid #ddd;
-    border-radius: 6px;
-  }
-  
-  input[type="checkbox"] {
-    transform: scale(1.4);
-    margin: 0;
-  }
-  
-  button {
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-  }
-  
-  button:hover {
-    background-color: #e53935;
-  }
-  
-  #totalCost {
-    margin-top: 20px;
-    text-align: right;
-    font-size: 1.2rem;
-    font-weight: bold;
-  }
-  
-  #totalCost h3 {
-    color: #4CAF50;
-  }
-  
-  tr.purchased {
-    background-color: #d4edda;
-    text-decoration: line-through;
-  }
-  
-  /* Media Queries para Responsividade */
-  
-  /* Tela pequena (smartphones) */
-  @media (max-width: 600px) {
-    .container {
-      padding: 20px;
-      margin: 10px;
-    }
-  
-    h1 {
-      font-size: 1.6rem;
-    }
-  
-    h2 {
-      font-size: 1.4rem;
-    }
-  
-    form {
-      gap: 10px;
-      flex-direction: column;
-    }
-  
-    form input, form button {
-      flex: 1 1 100%;
-    }
-  
-    table {
-      overflow-x: auto;
-      display: block;
-    }
-  
-    table th, table td {
-      font-size: 0.9rem;
-      padding: 10px;
-    }
-  
-    #totalCost h3 {
-      font-size: 1.4rem;
-    }
-  }
-  
-  /* Tela média (tablets) */
-  @media (max-width: 1024px) {
-    .container {
-      padding: 25px;
-    }
-  
-    h1 {
-      font-size: 1.8rem;
-    }
-  
-    h2 {
-      font-size: 1.6rem;
-    }
-  
-    form {
-      gap: 12px;
-    }
-  
-    form input, form button {
-      flex: 1 1 calc(48% - 10px); /* Ajusta para mais espaço em tablets */
-    }
-  
-    table th, table td {
-      font-size: 1rem;
-      padding: 10px;
-    }
-  
-    #totalCost h3 {
-      font-size: 1.6rem;
-    }
-  }
-  
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 700px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+form input, form button {
+  flex: 1 1 calc(30% - 10px);
+  min-width: 100px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+form button {
+  flex: 1 1 calc(15% - 10px);
+  cursor: pointer;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  text-align: center;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+input[type="number"] {
+  width: 70px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.5);
+  margin: 5px;
+}
+
+tr.purchased {
+  background-color: #d4edda;
+}
+
+#totalCost {
+  margin-top: 20px;
+  text-align: right;
+}
+
+button {
+  cursor: pointer;
+}
