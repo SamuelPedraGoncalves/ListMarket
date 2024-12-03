@@ -2,7 +2,7 @@ const itemForm = document.getElementById('itemForm');
 const itemList = document.getElementById('itemList');
 const totalValue = document.getElementById('totalValue');
 
-let items = [];
+let items = JSON.parse(localStorage.getItem('items')) || [];
 
 itemForm.addEventListener('submit', (e) => {
   e.preventDefault();
@@ -19,6 +19,8 @@ itemForm.addEventListener('submit', (e) => {
     totalValue: 0, 
     purchased: false 
   });
+
+  saveItems();
 
   renderItems();
   updateTotal();
@@ -60,16 +62,24 @@ function updateCost(index, cost) {
   document.getElementById(`total-${index}`).textContent = 
     `R$ ${items[index].totalValue.toFixed(2)}`;
   
+  saveItems();
+  
   updateTotal();
 }
 
 function togglePurchased(index) {
   items[index].purchased = !items[index].purchased;
+  
+  saveItems();
+  
   renderItems();
 }
 
 function deleteItem(index) {
   items.splice(index, 1);
+  
+  saveItems();
+  
   renderItems();
   updateTotal();
 }
@@ -78,3 +88,10 @@ function updateTotal() {
   const total = items.reduce((sum, item) => sum + item.totalValue, 0);
   totalValue.textContent = total.toFixed(2);
 }
+
+function saveItems() {
+  localStorage.setItem('items', JSON.stringify(items));
+}
+
+renderItems();
+updateTotal();
