@@ -1,8 +1,10 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #f5f5f5;
+  background-color: #f0f4f7;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden; 
 }
 
 .container {
@@ -12,16 +14,21 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  width: 100%; 
 }
 
 h1, h2 {
   text-align: center;
+  color: #4CAF50;
 }
 
 form {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 form input, form button {
@@ -29,11 +36,26 @@ form input, form button {
   min-width: 100px;
   padding: 10px;
   font-size: 1rem;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form input:focus, form button:focus {
+  border-color: #4CAF50;
 }
 
 form button {
   flex: 1 1 calc(15% - 10px);
   cursor: pointer;
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+}
+
+form button:hover {
+  background-color: #45a049;
 }
 
 table {
@@ -41,16 +63,23 @@ table {
   border-collapse: collapse;
   margin-top: 20px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 th, td {
   border: 1px solid #ddd;
   padding: 8px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: #d3d3d3;
+  color: #303030;
+}
+
+tr.purchased {
+  background-color: #d4edda;
 }
 
 input[type="number"] {
@@ -62,15 +91,74 @@ input[type="checkbox"] {
   margin: 5px;
 }
 
-tr.purchased {
-  background-color: #d4edda;
-}
-
 #totalCost {
   margin-top: 20px;
   text-align: right;
+  font-size: 16px;
+  font-weight: bold;
+  color: #4CAF50;
 }
 
 button {
   cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  form input, form button {
+    flex: 1 1 calc(45% - 10px);
+    min-width: 120px;
+  }
+
+  form button {
+    flex: 1 1 calc(40% - 10px);
+  }
+
+  table {
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 6px;
+  }
+
+  input[type="number"] {
+    width: 50px;
+  }
+
+  #totalCost {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  form input, form button {
+    flex: 1 1 100%;
+    min-width: 100%;
+  }
+
+  table {
+    font-size: 12px;
+  }
+
+  th, td {
+    padding: 4px;
+  }
+
+  input[type="number"] {
+    width: 50px;
+  }
+
+  #totalCost {
+    font-size: 12px;
+  }
 }
